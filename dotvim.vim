@@ -8,9 +8,9 @@
 "
 "
 
-set nocompatible
+set nocompatible        " Forget compatibility with vi - must be first line
 
-set encoding=utf-8
+set encoding=utf-8      " Necessary to show unicode glyphs
 set binary
 
 " presentation settings
@@ -25,7 +25,7 @@ set wildmenu            " enhanced command completion
 set visualbell          " use visual bell instead of beeping
 set laststatus=2        " always show the status lines
 set list listchars=tab:→\ ,trail:▸
-set cursorline
+set cursorline          " Highlight the line the cursor is on
 
 " highlight spell errors
 hi SpellErrors guibg=red guifg=black ctermbg=red ctermfg=black
@@ -37,9 +37,9 @@ map <F7> :setlocal spell! spell?<CR>
 set wildignore=.svn,CVS,.git,.hg,*.o,*.a,*.class,*.mo,*.la,*.so,*.obj,*.swp,*.jpg,*.png,*.xpm,*.gif
 set shell=$SHELL        " use current shell for shell commands
 set hidden              " enable multiple modified buffers
-set history=1000
-set autoread            " automatically read feil that has been changed on disk and doesn't have changes in vim
-set backspace=indent,eol,start
+set history=1000        " Store last 1000 commands in history (default is 20)
+set autoread            " automatically read file that has been changed on disk and doesn't have changes in vim
+set backspace=indent,eol,start " Intuitive backspace
 set guioptions-=T       " disable toolbar"
 set completeopt=menuone,preview
 set cinoptions=:0,(s,u0,U1,g0,t0 " some indentation options ':h cinoptions' for details
